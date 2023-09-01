@@ -6,5 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: test
-        run: echo HELLO WORLD
+      - name: use reposirory
+        uses: actions/checkout@v3
+      - name: use node
+        run: npm ci
+      - name: start
+        run: npm run start
